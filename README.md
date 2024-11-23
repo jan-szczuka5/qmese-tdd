@@ -17,7 +17,7 @@ Project should be built and run using Java 8 or above.
 
 4. Execute in the terminal ```java -jar conference-management-1.0.jar ```
 
-Alternatively run ```mvn spring-boot:run``` from command line or IDE or execute *conference_management.ConferenceManagementApplication.main()* from within IDE.
+Alternatively run ```mvn spring-boot:run``` from command line or IDE or execute *conference.management.ConferenceManagementApplication.main()* from within IDE.
 
 Once the service is up and running the documentation of the REST API can be accessed at:
 
