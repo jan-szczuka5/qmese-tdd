@@ -18,6 +18,8 @@
         <lombok.version>1.18.26</lombok.version>
         <slf4j.version>2.0.0-alpha0</slf4j.version>
         <springdoc.version>2.1.0</springdoc.version>
+        <junit.version>5.11.4</junit.version>
+        <mockito.version>5.15.2</mockito.version>
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
     </properties>
 
@@ -71,6 +73,22 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>${springdoc.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito.version}</version>
         </dependency>
     </dependencies>
 
