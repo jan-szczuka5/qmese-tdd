@@ -36,7 +36,9 @@ The portal should support the following scenarios:
 ### TDD task
 Your task is to implement two functionalities: **lecture registration** and **user update**, as well as write tests for these functionalities 
 (using either a TDD or non-TDD approach depending on the group you belong to). 
-The functionalities to be implemented are located in the User Service: ```../qmese-tdd/src/main/java/conference/management/service/UserService.java```.
+The functionalities to be implemented are located in the User Service: 
+
+```../qmese-tdd/src/main/java/conference/management/service/UserService.java```.
 
 
 
