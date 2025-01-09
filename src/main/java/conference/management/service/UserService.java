@@ -51,13 +51,25 @@ public class UserService {
 
     @Transactional
     public User updateUser(String email, String newEmail) {
-        //TODO: provide implementation for updating user
-        return null;
+        Optional<UserEntity> possibleUser = userRepository.findByEmail(email);
+        if (possibleUser.isEmpty()) {
+            throw new IllegalArgumentException("Invalid email provided.");
+        }
+        UserEntity userEntity = possibleUser.get();
+        userEntity.setEmail(newEmail);
+        userRepository.save(userEntity);
+        return userMapper.toUser(userEntity);
     }
 
     @Transactional
     public void registerForLecture(String login, LectureRequest lectureRequest) {
-        //TODO: provide implementation for lecture registration
+        UserEntity userEntity = findUser(login);
+        LectureEntity lectureEntity = findLecture(lectureRequest.pathNumber(), lectureRequest.lectureNumber());
+
+        Set<LectureEntity> lectures = userEntity.getLectures();
+        lectures.add(lectureEntity);
+        userEntity.setLectures(lectures);
+        userRepository.save(userEntity);
     }
 
     @Transactional
